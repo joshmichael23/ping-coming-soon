@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+*{
+    box-sizing: border-box;
+    margin:0;
+    font: inherit;
+}
+
+html, body{
+    min-height: 100svh;
+    font-family: "Libre Franklin";
+}
+
+img, svg{
+    max-width: 100%;
+    display: block;
+}
+
+body{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.container{
+    display:flex;
+}
+
+form{
+    display:flex;
+}
+
+form>div>input{
+    padding: 0px 2em;
+    outline: none;
+    height: 50px;
+    border-radius: 2em;
+    border: 1px solid hsl(223, 100%, 88%);
+}
+
+.formInput{
+    transition: all .2s;    
+    display: flex;
+    flex-direction: column;
+}
+form> div> input:focus{
+    border: 2px solid hsl(223, 100%, 88%);
+}
+form>button{
+    border:none;
+    background-color: hsl(223, 87%, 63%);
+    padding: 1em;
+    border-radius: 2em;
+    color:white;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0px 7px 13px 0px hsl(0, 0%, 59%, .4);
+}
+h1{
+    font-size: 1.5rem;
+    color:hsl(0, 0%, 59%);
+    font-weight: 300;
+}
+
+h1>span{
+    color:black;
+    font-weight: 700;
+}
+
+footer{
+    display:flex; 
+    flex-direction: column;
+    gap: 1em;
+}
+.button-footer{
+    gap: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.social-media{
+    border:1px solid hsl(223, 87%, 63%);
+    background-color: white;
+    border-radius: 50%;
+    height: 20px;
+    width: auto;
+    aspect-ratio: 1/1;
+    padding: 1rem;
+    text-align: center;
+
+    color: hsl(223, 87%, 63%);
+}
+
+.hero{
+    content: url('images/illustration-dashboard.png');
+    object-fit: contain;
+    max-height:500px;
+}
+
+label{
+
+    font-size: .9rem;
+    color:red;
+    display:none;
+}
+
+@media screen and (min-width: 280px) and (max-width: 799px) {
+
+    label{
+        text-align: center;
+        font-size: .8rem;
+    }
+    html, body{
+        width: 100%;
+    }
+
+    body{
+        position: fixed;
+    }
+    main{
+        display: flex;
+        height: 100%;
+        padding: 2em;
+        max-width: 100%;
+    }
+
+    form{
+        width: 100%;
+        gap: 1em;
+        flex-direction: column;
+    }
+
+    
+
+    .form-button, .form-input, p{
+        font-size: .9rem;
+    }
+
+    section, form, .form-button, .form-input{
+        width: 100%;
+    }
+
+    .container{
+        gap: 3rem;
+        align-items:center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    section{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .social-media{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer{
+        position: absolute;
+        bottom: 10px;
+    }
+}
+
+@media screen and (min-width: 800px){
+    main{
+        padding:0;
+    }
+    .container{
+        
+        flex-direction: column;
+    }
+    main, .container{
+        width: 100%;
+        gap:2rem;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer{
+        display: flex;
+        justify-content: end;
+        height: 20%;
+        position: relative;
+    }
+
+    section{
+        gap: 1em;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        height: 40%;
+        width: 50%;
+    }
+
+    section > h1{
+        font-size: 2.5rem;
+    }
+
+    form{
+        width:100%;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    form >div{
+        width: 65%;
+    }
+
+    form > button{
+        width: 30%;
+        max-height: 50px;
+    }
+    
+    label{
+        margin-left: 2rem;
+
+    }
+    .social-media{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
